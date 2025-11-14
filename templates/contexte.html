@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-container">
+    <h1>Contexte du Projet</h1>
+
+    <div class="content">
+        <div class="intro-section">
+            <div class="flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="text-column">
+                    <h2>Projet Pharma App</h2>
+                    <p>Application Flask interconnectée à PrestaShop pour la gestion de données produits.</p>
+                </div>
+
+                <!-- Colonne de droite - Image (20%) -->
+                <div class="images-column">
+                    <img src="{{ url_for('static', filename='images/reflexion.webp') }}" alt="Réflexion projet"
+                        class="content-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-buttons">
+            <button class="modal-btn" data-modal="origine-modal">Origine du projet</button>
+            <button class="modal-btn" data-modal="architecture-modal">Architecture technique</button>
+            <button class="modal-btn" data-modal="stack-modal">Stack technique détaillée</button>
+            <button class="modal-btn" data-modal="parcours-modal">Parcours utilisateur</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modale Origine du projet -->
+<div id="origine-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Origine du projet</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="modal-text-column">
+                    <p><strong>Constats observés par le client visiteur médical :</strong></p>
+                    <p id="constat"><em>"De nombreux parents, et notamment les jeunes mamans, rencontrent des
+                            difficultés à organiser, mutualiser et financer leurs achats pharmaceutiques."</em></p>
+                    <ul>
+                        <li>Difficultés des parents à organiser les achats pharmaceutiques</li>
+                        <li>Problèmes de mutualisation et financement des achats</li>
+                        <li>Particulièrement lors de l'arrivée d'un premier enfant</li>
+                    </ul>
+                    <h3 id="x2objectif">Double objectif</h3>
+                    <ul>
+                        <li><strong>Simplifier et fluidifier</strong> le parcours d'achat des familles</li>
+                        <li><strong>Favoriser la vente locale</strong> en connectant les familles aux pharmacies de
+                            proximité</li>
+                    </ul>
+                </div>
+
+                <!-- Colonne de droite - Image (20%) -->
+                <div class="modal-image-column">
+                    <img src="{{ url_for('static', filename='images/pharma.png') }}" alt="Pharmacie"
+                        class="modal-content-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modale Architecture technique -->
+<div id="architecture-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Architecture technique</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="modal-text-column">
+                    <div class="architecture-section">
+                        <div class="arch-item">
+                            <h4>Back-Office PrestaShop</h4>
+                            <ul>
+                                <li>Gestion du catalogue produits et des pharmacies</li>
+                                <li>Déclenche la création des listes figées</li>
+                                <li>Ne gère pas les paiements ni notifications</li>
+                            </ul>
+                        </div>
+
+                        <div class="arch-item">
+                            <h4>WebApp Flask (Python)</h4>
+                            <ul>
+                                <li>Gestion complète du cycle de vie des listes</li>
+                                <li>Système de notifications automatiques</li>
+                                <li>Authentification JWT et gestion des rôles</li>
+                                <li>Interface dynamique avec templates Flask</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonne de droite - Images empilées (20%) -->
+                <div class="modal-images-column">
+                    <div class="modal-image-stack">
+                        <img src="{{ url_for('static', filename='images/Prestashop-logo.webp') }}" alt="Logo PrestaShop"
+                            class="modal-stacked-image">
+                        <img src="{{ url_for('static', filename='images/logo Flask.webp') }}" alt="Logo Flask"
+                            class="modal-stacked-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modale Stack technique détaillée -->
+<div id="stack-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Stack technique détaillée</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="modal-text-column">
+                    <div class="tech-stack">
+                        <div class="tech-category">
+                            <h4>Backend & Base de données</h4>
+                            <ul>
+                                <li><strong>Python 3.14.0 & Flask</strong> - Langage principal & Framework</li>
+                                <li><strong>SQLAlchemy</strong> - ORM et gestion base de données</li>
+                                <li><strong>MySQL</strong> - Base de données principale</li>
+                                <li><strong>Flask-JWT-Extended</strong> - Authentification sécurisée</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-category">
+                            <h4>Services externes & Sécurité</h4>
+                            <ul>
+                                <li><strong>Stripe</strong> - Paiements sécurisés SCA/3DS</li>
+                                <li><strong>CSRF Protection</strong> - Sécurité des formulaires</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-category">
+                            <h4>Frontend & Outils</h4>
+                            <ul>
+                                <li><strong>Jinja2</strong> - Templates HTML</li>
+                                <li><strong>HTML/CSS/JS natif</strong> - Interface responsive</li>
+                                <li><strong>Git/GitHub</strong> - Versionnage et collaboration</li>
+                                <li><strong>Balsamiq</strong> - Wireframes et maquettes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonne de droite - Image (20%) -->
+                <div class="modal-image-column">
+                    <img src="{{ url_for('static', filename='images/super.png') }}" alt="Stack technique"
+                        class="modal-content-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modale Parcours utilisateur -->
+<div id="parcours-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Parcours utilisateur</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="modal-text-column">
+                    <ol class="user-journey-list">
+                        <li>
+                            <p><strong>Admin</strong> crée le catalogue et les comptes pharmacies</p>
+                        </li>
+                        <li>
+                            <p><strong>Pharmacien</strong> personnalise son catalogue et crée une liste avec la maman
+                            </p>
+                        </li>
+                        <li>
+                            <p><strong>Maman</strong> active son compte et partage la liste à ses proches</p>
+                        </li>
+                        <li>
+                            <p><strong>Proches</strong> contribuent via lien Stripe sécurisé</p>
+                        </li>
+                        <li>
+                            <p><strong>Paiement validé</strong> → fonds transférés et liste mise à jour</p>
+                        </li>
+                        <li>
+                            <p><strong>Pharmacien</strong> remet les produits et déduit la cagnotte</p>
+                        </li>
+                        <li>
+                            <p><strong>Maman</strong> clôture la liste et envoie des remerciements</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Colonne de droite - Image (20%) -->
+                <div class="modal-image-column">
+                    <img src="{{ url_for('static', filename='images/ux.webp') }}" alt="Expérience utilisateur"
+                        class="modal-content-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

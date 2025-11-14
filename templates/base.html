@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Stage - Pharma App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Arial:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <ul>
+                <li>
+                    <a href="{{ url_for('accueil') }}" class="nav-link">
+                        <img src="{{ url_for('static', filename='images/home-icon.svg') }}" alt="" class="nav-icon">
+                        <span>Accueil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('contexte') }}" class="nav-link">
+                        <img src="{{ url_for('static', filename='images/context-icon.svg') }}" alt="" class="nav-icon">
+                        <span>Contexte</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('mission') }}" class="nav-link">
+                        <img src="{{ url_for('static', filename='images/mission-icon.svg') }}" alt="" class="nav-icon">
+                        <span>Mission</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('methodologie') }}" class="nav-link">
+                        <img src="{{ url_for('static', filename='images/method-icon.svg') }}" alt="" class="nav-icon">
+                        <span>Méthodologie</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('conclusion') }}" class="nav-link">
+                        <img src="{{ url_for('static', filename='images/conclusion-icon.svg') }}" alt="" class="nav-icon">
+                        <span>Conclusion</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="{{ url_for(previous_slug) }}" class="cta-btn prev-btn" aria-label="Page précédente">
+                <img src="{{ url_for('static', filename='images/arrow-left.svg') }}" alt="" class="btn-icon">
+                Précédent
+            </a>
+            
+            <span class="copyright">
+                © créé par Jean-François Poux - 20/11/2025
+            </span>
+            
+            <a href="{{ url_for(next_slug) }}" class="cta-btn next-btn" aria-label="Page suivante">
+                Suivant
+                <img src="{{ url_for('static', filename='images/arrow-right.svg') }}" alt="" class="btn-icon">
+            </a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

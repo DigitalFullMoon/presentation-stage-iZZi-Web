@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-container">
+    <h1>Méthodologie de Travail</h1>
+    
+    <div class="content">
+        <h2>Approche de développement</h2>
+        <ul>
+            <li>Méthode itérative et collaborative inspirée des méthodes agiles</li>
+            <li>Binôme permanent avec validation des étapes</li>
+            <li>Wireframes & MLD validés avant développement</li>
+            <li>Intégration continue avec tests locaux</li>
+        </ul>
+        
+        <h2>Environnement technique</h2>
+        <ul>
+            <li><strong>Backend :</strong> Flask (Python), SQLAlchemy</li>
+            <li><strong>Base de données :</strong> MySQL</li>
+            <li><strong>Frontend :</strong> Flask Templates, HTML/CSS/JS natif</li>
+            <li><strong>Outils :</strong> Git/GitHub, Balsamiq, Looping, Postman</li>
+            <li><strong>Sécurité :</strong> JWT, RBAC, CSRF protection</li>
+        </ul>
+        
+        <h2>Workflow Git</h2>
+        <ul>
+            <li>Branches : main (stable), dev (intégration), feature/... (tâches)</li>
+            <li>Pull requests systématiques avec relecture de code</li>
+            <li>Tests avant chaque merge</li>
+            <li>Exclusion des fichiers sensibles (config.py)</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

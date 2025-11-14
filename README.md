@@ -59,10 +59,6 @@ Le projet a été mené en binôme :
 
 ---
 
-## 5. Pour aller plus loin
-
-Pour plus de détails sur la méthode de travail, l’organisation et les technologies utilisées, voir le fichier [`methode.md`](methode.md).
-
 ## 2. Introduction
 
 Cette mini application a été réalisée avec Python et le framework Flask.

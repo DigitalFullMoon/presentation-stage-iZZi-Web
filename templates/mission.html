@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-container">
+    <h1>Mission et Objectifs</h1>
+    
+    <div class="content">
+        <div class="modal-buttons">
+            <button class="modal-btn" data-modal="contributions-modal">Contributions principales</button>
+            <button class="modal-btn" data-modal="transverses-modal">Missions transverses</button>
+            <button class="modal-btn" data-modal="securite-modal">Sécurité et conformité</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modale Contributions principales -->
+<div id="contributions-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Contributions principales</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="contributions-grid">
+                <div class="contribution-item">
+                    <h4>Module Client</h4>
+                    <ul>
+                        <li>Création du dashboard maman</li>
+                        <li>Gestion de la liste, du profil et des remerciements</li>
+                        <li>Templates parametres.html, profil_client.html</li>
+                        <li>Routes Flask et ORM GifList, Contribution</li>
+                    </ul>
+                </div>
+                
+                <div class="contribution-item">
+                    <h4>Module Company</h4>
+                    <ul>
+                        <li>Espace pharmacie complet</li>
+                        <li>Gestion catalogue, clients, bundles, paiements</li>
+                        <li>Templates clients.html, my_profile.html</li>
+                        <li>ORM Product, BundleList, PharmaBank</li>
+                    </ul>
+                </div>
+                
+                <div class="contribution-item">
+                    <h4>Module Register</h4>
+                    <ul>
+                        <li>Formulaire d'inscription pharmacie</li>
+                        <li>Validation complète côté client et serveur</li>
+                        <li>Vérification doublons (email, CIP)</li>
+                        <li>Template register.html avec JS</li>
+                    </ul>
+                </div>
+
+                <div class="contribution-item">
+                    <h4>Wireframes</h4>
+                    <ul>
+                        <li>Conception interfaces avec Balsamiq</li>
+                        <li>Validation ergonomie avant développement</li>
+                        <li>Scénarios utilisateur (maman, pharmacien)</li>
+                        <li>Maquettes navigation et parcours</li>
+                    </ul>
+                </div>
+
+                <div class="contribution-item">
+                    <h4>MLD (Modèle Logique de Données)</h4>
+                    <ul>
+                        <li>Modélisation base de données avec Looping</li>
+                        <li>Définition tables et relations</li>
+                        <li>Scripts SQL de création</li>
+                        <li>Validation schéma avant développement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Les autres modales restent identiques -->
+<div id="transverses-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Missions transverses</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="mission-item">
+                <h4>Refonte site e-commerce WordPress</h4>
+                <ul>
+                    <li>Modernisation d'un site vieillissant</li>
+                    <li>Optimisation performance (+45% PageSpeed)</li>
+                    <li>Réorganisation catalogue produits</li>
+                    <li>Amélioration métadonnées SEO</li>
+                </ul>
+            </div>
+            
+            <div class="mission-item">
+                <h4>Audits SEO/UX</h4>
+                <ul>
+                    <li>Analyse de 3 sites clients</li>
+                    <li>Outils : Screaming Frog, Google Search Console, Semrush</li>
+                    <li>Étude performances mobiles (Core Web Vitals)</li>
+                    <li>Recommandations accessibilité RGAA</li>
+                </ul>
+            </div>
+            
+            <div class="mission-item">
+                <h4>Cellule de crise PrestaShop x EBP</h4>
+                <ul>
+                    <li>Diagnostic panne critique synchronisation</li>
+                    <li>Analyse logs Apache/PhP et traces SQL</li>
+                    <li>Script SQL correctif pour rétablir statuts</li>
+                    <li>Résolution en moins de 48 heures</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="securite-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Sécurité et conformité</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="security-grid">
+                <div class="security-item">
+                    <h4>Authentification</h4>
+                    <ul>
+                        <li>JWT (JSON Web Token) avec rôles</li>
+                        <li>RBAC (Role-Based Access Control)</li>
+                        <li>Durée de vie courte des tokens</li>
+                        <li>Stockage sécurisé côté client</li>
+                    </ul>
+                </div>
+                
+                <div class="security-item">
+                    <h4>Paiements</h4>
+                    <ul>
+                        <li>Stripe Checkout avec SCA/3DS</li>
+                        <li>Webhooks signés vérifiés serveur</li>
+                        <li>Conformité Stripe DPA</li>
+                        <li>Audit Log des transactions</li>
+                    </ul>
+                </div>
+                
+                <div class="security-item">
+                    <h4>Données et RGPD</h4>
+                    <ul>
+                        <li>Données minimisées</li>
+                        <li>Consentement utilisateur</li>
+                        <li>Mentions légales complètes</li>
+                        <li>Journalisation actions sensibles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

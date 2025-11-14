@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-container">
+    <h1>Développement d'une application Flask interconnectée à PrestaShop</h1>
+    
+
+    <div class="content">
+        <div class="intro-section">
+            <div class="flex-container">
+                
+                <!-- Colonne de gauche (70%) - Texte -->
+                <div class="text-column">
+                    <h2>Projet Pharma - Rapport de stage</h2>
+                    <h3>Présentation du stage</h3>
+                    <p><strong>Agence iZZi Web</strong> - Brive-la-Gaillarde</p>
+                    <p><strong>Formation :</strong> DWWM - AFPA Brive - 2025</p>
+                    <p><strong>Durée :</strong>10 semaines</p>
+                </div>
+
+                <!-- Colonne de droite (30%) - Images -->
+                <div class="images-column">
+                    <div class="image-stack">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='images/AFPA.webp') }}" alt="Logo AFPA"
+                                class="content-image">
+                        </div>
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='images/Logo Python.webp') }}" alt="Logo Python"
+                                class="content-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Boutons pour ouvrir les modales -->
+        <div class="modal-buttons">
+            <button class="modal-btn" data-modal="personal-modal">
+                Présentation personnelle
+            </button>
+
+            <button class="modal-btn" data-modal="entreprise-modal">
+                L'Agence iZZi Web
+            </button>
+
+            <button class="modal-btn" data-modal="objectifs-modal">
+                Objectifs du stage
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modale Présentation personnelle -->
+<div id="personal-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Présentation personnelle</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-flex-container">
+                <!-- Colonne de droite - Texte (80%) -->
+                <div class="modal-text-column">
+                    <p>Je suis <strong>Jean-François Poux</strong>, en reconversion vers les métiers du digital après plus de
+                        vingt années d'expérience dans le commerce.</p>
+
+                    <div class="highlights">
+                        <div class="highlight-card">
+                            <h4>Parcours de formation</h4>
+                            <ul>
+                                <li>Bachelor Responsable de Développement Commercial (Major de promotion 2016)</li>
+                                <li>Référent Digital - Certifications Agile, WordPress, OPQUAST</li>
+                                <li>Bachelor Chef de Projet Web et Responsable de la Stratégie Digitale (2021)</li>
+                                <li>Formation Développeur Web et Web Mobile - AFPA Brive (2025)</li>
+                            </ul>
+                        </div>
+
+                        <div class="highlight-card">
+                            <h4>Expérience professionnelle</h4>
+                            <ul>
+                                <li>Gestion de patrimoine et automobile</li>
+                                <li>Chef de projet web en start-up (e-commerce, SEO, SEA)</li>
+                                <li>Office manager et direction opérationnelle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Colonne de gauche - Image (20%) -->
+                <div class="modal-image-column">
+                    <img src="{{ url_for('static', filename='images/salut.webp') }}" alt="Photo" class="modal-content-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modale Agence iZZi Web -->
+<div id="entreprise-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>L'Agence iZZi Web</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="modal-text-column">
+                    <p>Fondée par <strong>Alexandre de Sousa</strong>, l'agence iZZi Web accompagne les entreprises dans leur
+                        transformation digitale depuis Brive-la-Gaillarde.</p>
+
+                    <div class="services-grid">
+                        <div class="service-item">
+                            <h4>Services principaux</h4>
+                            <ul>
+                                <li>Création et refonte de sites internet</li>
+                                <li>Développement e-commerce (WooCommerce, PrestaShop)</li>
+                                <li>Référencement naturel et payant (SEO/SEA)</li>
+                                <li>Stratégie digitale et webmarketing</li>
+                                <li>Maintenance et hébergement web</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-item">
+                            <h4>Équipe pluridisciplinaire</h4>
+                            <ul>
+                                <li><strong>Charles Massey</strong> - Lead développeur application</li>
+                                <li><strong>Arnaud Friconnet</strong> - Intégrateur</li>
+                                <li><strong>Alexandre de Sousa</strong> - Référenceur, webmarketeur, CEO</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Colonne de droite - Image (20%) -->
+                <div class="modal-image-column">
+                    <img src="{{ url_for('static', filename='images/logo-izzi.webp') }}" alt="Logo iZZi Web" class="modal-content-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modale Objectifs du stage -->
+<div id="objectifs-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Objectifs du stage</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="modal-text-column">
+                    <div class="objectifs-grid">
+                        <div class="objectif-card">
+                            <h4>Technique</h4>
+                            <ul>
+                                <li>Maîtriser le développement back-end Python/Flask</li>
+                                <li>Intégrer des systèmes d'authentification sécurisés (JWT)</li>
+                                <li>Comprendre l'interconnexion PrestaShop/API</li>
+                                <li>Développer une application full-stack</li>
+                            </ul>
+                        </div>
+
+                        <div class="objectif-card">
+                            <h4>Professionnel</h4>
+                            <ul>
+                                <li>Travailler en méthode agile en binôme</li>
+                                <li>Participer aux réunions client</li>
+                                <li>Documenter le projet de manière professionnelle</li>
+                                <li>Intégrer une équipe de développement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Colonne de droite - Images empilées (20%) -->
+                <div class="modal-images-column">
+                    <div class="modal-image-stack">
+                        <img src="{{ url_for('static', filename='images/Logo Python.webp') }}" alt="Logo Python" class="modal-stacked-image">
+                        <img src="{{ url_for('static', filename='images/logo Flask.webp') }}" alt="Logo Flask" class="modal-stacked-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

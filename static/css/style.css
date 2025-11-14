@@ -1,0 +1,534 @@
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #fbfbfb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header et Navigation */
+header {
+    background-color: #7D41D7;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fbfbfb;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    min-width: 90px;
+    font-weight: 500;
+}
+
+/* État actif - Vert */
+.main-nav a.active {
+    background-color: #27AE60 !important;
+    color: #fbfbfb !important;
+}
+
+/* Survol - Rose RGAA compatible */
+.main-nav a:hover {
+    background-color: #E91E63;
+    color: #fbfbfb;
+    transform: translateY(-2px);
+}
+
+/* Focus pour accessibilité */
+.main-nav a:focus {
+    outline: 3px solid #fbfbfb;
+    outline-offset: 2px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0.5rem;
+    filter: brightness(0) invert(1);
+}
+
+.main-nav span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.page-container {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+}
+
+.page-container h1 {
+    color: #7D41D7;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #7D41D7;
+    padding-bottom: 0.75rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #7D41D7;
+    color: #fbfbfb;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 1rem;
+}
+
+/* Boutons CTA */
+.cta-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    color: #fbfbfb;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    min-width: 160px;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Bouton Précédent - Rose RGAA compatible */
+.prev-btn {
+    background-color: #E91E63;
+}
+
+.prev-btn:hover {
+    background-color: #C2185B;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
+}
+
+/* Bouton Suivant - Vert RGAA compatible */
+.next-btn {
+    background-color: #27AE60;
+}
+
+.next-btn:hover {
+    background-color: #219653;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+/* Focus pour accessibilité */
+.cta-btn:focus {
+    outline: 3px solid #fbfbfb;
+    outline-offset: 2px;
+}
+
+.btn-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.prev-btn {
+    margin-right: auto;
+}
+
+.next-btn {
+    margin-left: auto;
+}
+
+.copyright {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Colorisation des SVG pour la navigation */
+.main-nav .nav-icon {
+    fill: #fbfbfb;
+}
+
+.main-nav a:hover .nav-icon {
+    fill: #fbfbfb;
+}
+
+/* Colorisation des SVG pour les boutons */
+.cta-btn .btn-icon {
+    fill: #fbfbfb;
+}
+
+/* Styles pour les boutons modales */
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.modal-btn {
+    background: linear-gradient(135deg, #7D41D7 0%, #6a34c9 100%);
+    color: #fbfbfb;
+    border: none;
+    padding: 1.2rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+.modal-btn:hover {
+    background: linear-gradient(135deg, #6a34c9 0%, #7D41D7 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(125, 65, 215, 0.3);
+}
+
+/* Styles pour les modales - PLUS LARGES */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-dialog {
+    background: #fbfbfb;
+    border-radius: 12px;
+    width: 95%;
+    max-width: none;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #7D41D7 0%, #6a34c9 100%);
+    color: #fbfbfb;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.4rem;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: #fbfbfb;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.modal-close:hover {
+    transform: scale(1.2);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+/* TAILLES DE TEXTE AUGMENTÉES DANS LES MODALES */
+.modal-body p {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.modal-body li {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.modal-body h4 {
+    font-size: 28px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    color: #7D41D7;
+    margin: 1.5rem 0 1rem 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MODIFICATIONS POUR LE FLEX CONTAINER DES IMAGES REDUITES */
+.intro-section .flex-container {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+    align-items: flex-start;
+}
+
+.intro-section .text-column {
+    flex: 0 0 70%;
+}
+
+.intro-section .images-column {
+    flex: 0 0 30%;
+}
+
+.intro-section .image-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.intro-section .content-image {
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+/* Flex Container pour les modales */
+.modal-flex-container {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    min-height: 400px;
+}
+
+.modal-text-column {
+    flex: 0 0 80%;
+}
+
+.modal-image-column {
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+}
+
+.modal-content-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Styles pour les images empilées dans les modales */
+.modal-images-column {
+    flex: 0 0 20%;
+    display: flex;
+    align-items: stretch; /* Prend toute la hauteur */
+    height: 100%;
+}
+
+.modal-image-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Répartit l'espace entre les images */
+    width: 100%;
+    height: 100%; /* Prend toute la hauteur de la colonne */
+}
+
+.modal-stacked-image {
+    width: 70%;
+    height: 48%; /* 48% pour chaque image (avec un petit gap) */
+    object-fit: contain; /* Garde les proportions */
+    display: block;
+}
+
+#constat {
+    font-size: 18px;
+}
+
+#x2objectif {
+    font-size: 24px;
+    color: #7D41D7;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Styles pour la liste ordonnée du parcours utilisateur */
+.user-journey-list {
+    list-style-type: none;
+    counter-reset: journey-counter;
+    padding-left: 0;
+    
+}
+
+
+.user-journey-list li {
+    counter-increment: journey-counter;
+    margin-bottom: 1.5rem;
+    padding-left: 3rem;
+    position: relative;
+    
+}
+
+.user-journey-list li::before {
+    content: counter(journey-counter);
+    background: #7D41D7;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.user-journey-list p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Styles pour la page mission */
+.contributions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colonnes au lieu de 3 */
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.contribution-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #7D41D7;
+}
+
+.contribution-item h4 {
+    color: #7D41D7;
+    margin-bottom: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Les autres styles restent identiques */
+.mission-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #27AE60;
+}
+
+.mission-item h4 {
+    color: #7D41D7;
+    margin-bottom: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.security-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.security-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #E91E63;
+}
+
+.security-item h4 {
+    color: #7D41D7;
+    margin-bottom: 1rem;
+    font-family: 'Arial', sans-serif;
+}
