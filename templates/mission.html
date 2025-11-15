@@ -2,9 +2,25 @@
 
 {% block content %}
 <div class="page-container">
-    <h1>Mission et Objectifs</h1>
-    
+    <h1>Missionq et Objectifs</h1>
+
     <div class="content">
+        <div class="intro-section">
+            <div class="flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="text-column">
+                    <h2>Particper à la vie de l'agence</h2>
+                    <p>Durant mon stage j'ai eu à m'impliquer pleinement dans la vie de l'agence. Du 1er au dernier jour
+                        je n'ai pas été qu'un stagiaire mais pleinement considéré comme un professionnel du digital.</p>
+                </div>
+
+                <!-- Colonne de droite - Image (20%) -->
+                <div class="images-column">
+                    <img src="{{ url_for('static', filename='images/yes.webp') }}" alt="Réflexion projet"
+                        class="content-image">
+                </div>
+            </div>
+        </div>
         <div class="modal-buttons">
             <button class="modal-btn" data-modal="contributions-modal">Contributions principales</button>
             <button class="modal-btn" data-modal="transverses-modal">Missions transverses</button>
@@ -21,34 +37,87 @@
             <button class="modal-close">&times;</button>
         </div>
         <div class="modal-body">
-            <div class="contributions-grid">
+            <div class="contributions-flex">
                 <div class="contribution-item">
                     <h4>Module Client</h4>
                     <ul>
-                        <li>Création du dashboard maman</li>
+                        <li>
+                            Création du
+                            <a href="#" class="image-popup" data-image="Dashboard maman.webp">dashboard</a>
+                            <a href="#" class="image-popup" data-image="dashboard maman mobile.webp">maman</a>
+                        </li>
                         <li>Gestion de la liste, du profil et des remerciements</li>
-                        <li>Templates parametres.html, profil_client.html</li>
-                        <li>Routes Flask et ORM GifList, Contribution</li>
+                        <li>
+                            Templates
+                            <a href="#" class="image-popup" data-image="parametrehtml.webp">parametres.html</a>,
+                            profil_client.html
+                        </li>
+                        <li>
+                            <a href="#" class="image-popup" data-image="routeparametre.webp">Routes</a>
+                            Flask et
+                            <a href="#" class="image-popup" data-image="modelparemetre.webp">ORM</a>
+                            GifList, Contribution
+                        </li>
+                        <li>
+                            <a href="#" class="image-popup" data-image="jsparametre.webp">Scripts</a>
+                            JS pour l'interactivité (client_dashboard.js)
+                        </li>
+                        <li>Espace client ergonomique, autonome et fluide</li>
                     </ul>
                 </div>
-                
+
                 <div class="contribution-item">
                     <h4>Module Company</h4>
                     <ul>
-                        <li>Espace pharmacie complet</li>
+                        <li>
+                            Espace
+                            <a href="#" class="image-popup" data-image="Dashboardpharmacien.webp">pharmacie</a>
+                            complet
+                        </li>
                         <li>Gestion catalogue, clients, bundles, paiements</li>
                         <li>Templates clients.html, my_profile.html</li>
                         <li>ORM Product, BundleList, PharmaBank</li>
+                        <li>JS pour recherche, validation, gestion dynamique bundles</li>
+                        <li>Tableau de bord clair et complet pour le pharmacien</li>
                     </ul>
                 </div>
-                
+
                 <div class="contribution-item">
                     <h4>Module Register</h4>
                     <ul>
-                        <li>Formulaire d'inscription pharmacie</li>
+                        <li>
+                            Formulaire d'
+                            <a href="#" class="image-popup" data-image="routeregister.webp">inscription</a>
+                            pharmacie
+                        </li>
                         <li>Validation complète côté client et serveur</li>
                         <li>Vérification doublons (email, CIP)</li>
                         <li>Template register.html avec JS</li>
+                        <li>
+                            <a href="#" class="image-popup" data-image="modelregister.webp">ORM</a>
+                            Registration pour stockage SQL
+                        </li>
+                        <li>
+                            <a href="#" class="image-popup" data-image="jsregister.webp">Normalisation</a>
+                            automatique des données en direct
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contribution-item">
+                    <h4>Menu de Navigation</h4>
+                    <ul>
+                        <li>
+                            Conception du menu principal dynamique
+                            (<a href="#" class="image-popup" data-image="navhtml.webp">base.html</a>)
+                        </li>
+                        <li>Affichage (<a href="#" class="image-popup" data-image="nav cliente.webp">conditionnel</a>)
+                            selon rôle (<a href="#" class="image-popup"
+                                data-image="nav pharmacien.webp">utilisateur</a>)</li>
+                        <li>Navigation cohérente, responsive et accessible</li>
+                        <li>Intégration ARIA + navigation clavier</li>
+                        <li>Code Jinja2 pour gestion des rôles</li>
+                        <li>Menus spécifiques client et pharmacien</li>
                     </ul>
                 </div>
 
@@ -57,18 +126,23 @@
                     <ul>
                         <li>Conception interfaces avec Balsamiq</li>
                         <li>Validation ergonomie avant développement</li>
-                        <li>Scénarios utilisateur (maman, pharmacien)</li>
+                        <li>Scénarios (<a href="#" class="image-popup" data-image="pharmacien bureau.webp">utilisateur</a>) (maman, pharmacien)</li>
                         <li>Maquettes navigation et parcours</li>
+                        <li>Wireframes pour tous les (<a href="#" class="image-popup" data-image="pharmacien mobile.webp">états</a>) de l'application</li>
+                        <li>Validation client sur les parcours critiques</li>
                     </ul>
                 </div>
 
                 <div class="contribution-item">
                     <h4>MLD (Modèle Logique de Données)</h4>
                     <ul>
-                        <li>Modélisation base de données avec Looping</li>
+                        <li>Modélisation (<a href="#" class="image-popup" data-image="mld_pharmacie.webp">base de données</a>) avec Looping</li>
                         <li>Définition tables et relations</li>
                         <li>Scripts SQL de création</li>
-                        <li>Validation schéma avant développement</li>
+                        <li>Validation (<a href="#" class="image-popup"
+                                data-image="pharma_overview_schema.webp">schéma</a>) avant développement</li>
+                        <li>Tables : User, Pharmacy, Product, GifList, ListItem, Contribution, Payment, AuditLog</li>
+                        <li>Relations et contraintes d'intégrité définies</li>
                     </ul>
                 </div>
             </div>
@@ -93,7 +167,7 @@
                     <li>Amélioration métadonnées SEO</li>
                 </ul>
             </div>
-            
+
             <div class="mission-item">
                 <h4>Audits SEO/UX</h4>
                 <ul>
@@ -103,7 +177,7 @@
                     <li>Recommandations accessibilité RGAA</li>
                 </ul>
             </div>
-            
+
             <div class="mission-item">
                 <h4>Cellule de crise PrestaShop x EBP</h4>
                 <ul>
@@ -134,7 +208,7 @@
                         <li>Stockage sécurisé côté client</li>
                     </ul>
                 </div>
-                
+
                 <div class="security-item">
                     <h4>Paiements</h4>
                     <ul>
@@ -144,7 +218,7 @@
                         <li>Audit Log des transactions</li>
                     </ul>
                 </div>
-                
+
                 <div class="security-item">
                     <h4>Données et RGPD</h4>
                     <ul>
