@@ -3,36 +3,333 @@
 {% block content %}
 <div class="page-container">
     <h1>Conclusion et Perspectives</h1>
-    
+
     <div class="content">
-        <h2>Bilan technique</h2>
-        <ul>
-            <li>Maîtrise du framework Flask et structure MVC</li>
-            <li>Connexion entre PrestaShop et backend Python</li>
-            <li>Manipulation de SQLAlchemy, JWT, Stripe</li>
-            <li>Application des bonnes pratiques sécurité et RGPD</li>
-        </ul>
-        
-        <h2>Réalisations</h2>
-        <ul>
-            <li>Application Pharma App fonctionnelle</li>
-            <li>Documentation complète du projet</li>
-            <li>Contributions transverses dans l'agence</li>
-            <li>Intégration réussie en environnement professionnel</li>
-        </ul>
-        
-        <h2>Perspectives</h2>
-        <ul>
-            <li>Devenir chef de projet web expérimenté avec compétences full-stack</li>
-            <li>Mieux cadrer les besoins clients et chiffrer les devis</li>
-            <li>Accompagner les équipes avec bienveillance et précision</li>
-            <li>Garder les mains dans le code pour rester connecté à la réalité technique</li>
-        </ul>
-        
-        <blockquote>
-            "Cette expérience m'a permis d'unir mes deux dimensions professionnelles : 
-            celle du commercial empathique et rigoureux, et celle du développeur passionné et curieux."
-        </blockquote>
+        <div class="intro-section">
+            <div class="flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="text-column">
+                    <h2>Bilan du stage et vision future</h2>
+                    <p>Retour sur cette expérience enrichissante et perspectives d'évolution professionnelle.</p>
+                </div>
+
+                <!-- Colonne de droite - Image (20%) -->
+                <div class="images-column">
+                    <img src="{{ url_for('static', filename='images/coeur.webp') }}" alt="Conclusion et perspectives"
+                        class="content-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-buttons">
+            <button class="modal-btn" data-modal="maman-modal">Vue Maman</button>
+            <button class="modal-btn" data-modal="pharmacien-modal">Vue Pharmacien</button>
+            <button class="modal-btn" data-modal="prestashop-modal">Vue PrestaShop</button>
+            <button class="modal-btn" data-modal="bilan-modal">Bilan technique</button>
+            <button class="modal-btn" data-modal="perspectives-modal">Perspectives</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modale Vue Maman avec Slider - VERSION CORRIGEE -->
+<div id="maman-modal" class="modal">
+    <div class="modal-dialog fullscreen-slider">
+        <div class="modal-header">
+            <h3>Vue Maman - Interface Utilisateur</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <!-- Slider Container -->
+            <div class="slider-container">
+                <!-- Flèche précédente -->
+                <button class="slider-arrow prev-arrow" aria-label="Image précédente">
+                    ‹
+                </button>
+                
+                <!-- Container des slides -->
+                <div class="slides-wrapper">
+                    <div class="slide active">
+                        <img src="{{ url_for('static', filename='images/vue client.webp') }}" alt="Interface client 1" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue client1.webp') }}" alt="Interface client 2" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue client2.webp') }}" alt="Interface client 3" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue client3.webp') }}" alt="Interface client 4" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue client4.webp') }}" alt="Interface client 5" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue client5.webp') }}" alt="Interface client 6" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue client6.webp') }}" alt="Interface client 7" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue client7.webp') }}" alt="Interface client 8" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue client8.webp') }}" alt="Interface client 9" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue client9.webp') }}" alt="Interface client 10" class="slide-image">
+                    </div>
+                </div>
+                
+                <!-- Flèche suivante -->
+                <button class="slider-arrow next-arrow" aria-label="Image suivante">
+                    ›
+                </button>
+                
+                <!-- Indicateurs de position -->
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                    <span class="dot" data-slide="5"></span>
+                    <span class="dot" data-slide="6"></span>
+                    <span class="dot" data-slide="7"></span>
+                    <span class="dot" data-slide="8"></span>
+                    <span class="dot" data-slide="9"></span>
+                </div>
+            </div>
+            <!-- Fin Slider Container -->
+        </div>
+    </div>
+</div>
+
+<!-- Modale Vue Pharmacien avec Slider -->
+<div id="pharmacien-modal" class="modal">
+    <div class="modal-dialog fullscreen-slider">
+        <div class="modal-header">
+            <h3>Vue Pharmacien - Interface Professionnelle</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <!-- Slider Container -->
+            <div class="slider-container">
+                <!-- Flèche précédente -->
+                <button class="slider-arrow prev-arrow" aria-label="Image précédente">
+                    ‹
+                </button>
+                
+                <!-- Container des slides -->
+                <div class="slides-wrapper">
+                    <div class="slide active">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien.webp') }}" alt="Interface pharmacien 1" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien1.webp') }}" alt="Interface pharmacien 2" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien2.webp') }}" alt="Interface pharmacien 3" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien3.webp') }}" alt="Interface pharmacien 4" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien4.webp') }}" alt="Interface pharmacien 5" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien5.webp') }}" alt="Interface pharmacien 6" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien6.webp') }}" alt="Interface pharmacien 7" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien7.webp') }}" alt="Interface pharmacien 8" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien8.webp') }}" alt="Interface pharmacien 9" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien9.webp') }}" alt="Interface pharmacien 10" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien10.webp') }}" alt="Interface pharmacien 11" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien11.webp') }}" alt="Interface pharmacien 12" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien12.webp') }}" alt="Interface pharmacien 13" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien13.webp') }}" alt="Interface pharmacien 14" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien14.webp') }}" alt="Interface pharmacien 15" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue pharmacien15.webp') }}" alt="Interface pharmacien 16" class="slide-image">
+                    </div>
+                </div>
+                
+                <!-- Flèche suivante -->
+                <button class="slider-arrow next-arrow" aria-label="Image suivante">
+                    ›
+                </button>
+                
+                <!-- Indicateurs de position -->
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                    <span class="dot" data-slide="5"></span>
+                    <span class="dot" data-slide="6"></span>
+                    <span class="dot" data-slide="7"></span>
+                    <span class="dot" data-slide="8"></span>
+                    <span class="dot" data-slide="9"></span>
+                    <span class="dot" data-slide="10"></span>
+                    <span class="dot" data-slide="11"></span>
+                    <span class="dot" data-slide="12"></span>
+                    <span class="dot" data-slide="13"></span>
+                    <span class="dot" data-slide="14"></span>
+                    <span class="dot" data-slide="15"></span>
+                </div>
+            </div>
+            <!-- Fin Slider Container -->
+        </div>
+    </div>
+</div>
+
+<!-- Modale Vue PrestaShop avec Slider -->
+<div id="prestashop-modal" class="modal">
+    <div class="modal-dialog fullscreen-slider">
+        <div class="modal-header">
+            <h3>Vue PrestaShop - Backoffice Administration</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <!-- Slider Container -->
+            <div class="slider-container">
+                <!-- Flèche précédente -->
+                <button class="slider-arrow prev-arrow" aria-label="Image précédente">
+                    ‹
+                </button>
+                
+                <!-- Container des slides -->
+                <div class="slides-wrapper">
+                    <div class="slide active">
+                        <img src="{{ url_for('static', filename='images/vue prestashop.webp') }}" alt="Interface PrestaShop 1" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue prestashop1.webp') }}" alt="Interface PrestaShop 2" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue prestashop2.webp') }}" alt="Interface PrestaShop 3" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue prestashop3.webp') }}" alt="Interface PrestaShop 4" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue prestashop4.webp') }}" alt="Interface PrestaShop 5" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue prestashop5.webp') }}" alt="Interface PrestaShop 6" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue prestashop6.webp') }}" alt="Interface PrestaShop 7" class="slide-image">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/vue prestashop7.webp') }}" alt="Interface PrestaShop 8" class="slide-image">
+                    </div>
+                </div>
+                
+                <!-- Flèche suivante -->
+                <button class="slider-arrow next-arrow" aria-label="Image suivante">
+                    ›
+                </button>
+                
+                <!-- Indicateurs de position -->
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                    <span class="dot" data-slide="5"></span>
+                    <span class="dot" data-slide="6"></span>
+                    <span class="dot" data-slide="7"></span>
+                </div>
+            </div>
+            <!-- Fin Slider Container -->
+        </div>
+    </div>
+</div>
+
+<!-- Modale Bilan technique -->
+<div id="bilan-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Bilan technique</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="modal-text-column">
+                    <div class="bilan-section">
+                        <ul>
+                            <li>Maîtrise du framework Flask et structure MVC</li>
+                            <li>Connexion entre PrestaShop et backend Python</li>
+                            <li>Manipulation de SQLAlchemy, JWT, Stripe</li>
+                            <li>Application des bonnes pratiques sécurité et RGPD</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Colonne de droite - Image (20%) -->
+                <div class="modal-image-column">
+                    <img src="{{ url_for('static', filename='images/super.png') }}" alt="Bilan technique"
+                        class="modal-content-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modale Perspectives -->
+<div id="perspectives-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Perspectives</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="modal-text-column">
+                    <div class="perspectives-section">
+                        <ul>
+                            <li>Devenir chef de projet web expérimenté avec compétences full-stack</li>
+                            <li>Mieux cadrer les besoins clients et chiffrer les devis</li>
+                            <li>Accompagner les équipes avec bienveillance et précision</li>
+                            <li>Garder les mains dans le code pour rester connecté à la réalité technique</li>
+                        </ul>
+                        
+                        <blockquote>
+                            "Cette expérience m'a permis d'unir mes deux dimensions professionnelles : 
+                            celle du commercial empathique et rigoureux, et celle du développeur passionné et curieux."
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- Colonne de droite - Image (20%) -->
+                <div class="modal-image-column">
+                    <img src="{{ url_for('static', filename='images/power.webp') }}" alt="Perspectives"
+                        class="modal-content-image">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

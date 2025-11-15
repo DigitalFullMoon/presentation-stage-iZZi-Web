@@ -2,14 +2,14 @@
 
 {% block content %}
 <div class="page-container">
-    <h1>Missionq et Objectifs</h1>
+    <h1>Missions et Objectifs</h1>
 
     <div class="content">
         <div class="intro-section">
             <div class="flex-container">
                 <!-- Colonne de gauche - Texte (80%) -->
                 <div class="text-column">
-                    <h2>Particper à la vie de l'agence</h2>
+                    <h2>Participer à la vie de l'agence</h2>
                     <p>Durant mon stage j'ai eu à m'impliquer pleinement dans la vie de l'agence. Du 1er au dernier jour
                         je n'ai pas été qu'un stagiaire mais pleinement considéré comme un professionnel du digital.</p>
                 </div>
@@ -23,8 +23,9 @@
         </div>
         <div class="modal-buttons">
             <button class="modal-btn" data-modal="contributions-modal">Contributions principales</button>
-            <button class="modal-btn" data-modal="transverses-modal">Missions transverses</button>
             <button class="modal-btn" data-modal="securite-modal">Sécurité et conformité</button>
+            <button class="modal-btn" data-modal="transverses-modal">Missions transverses</button>
+
         </div>
     </div>
 </div>
@@ -126,9 +127,11 @@
                     <ul>
                         <li>Conception interfaces avec Balsamiq</li>
                         <li>Validation ergonomie avant développement</li>
-                        <li>Scénarios (<a href="#" class="image-popup" data-image="pharmacien bureau.webp">utilisateur</a>) (maman, pharmacien)</li>
+                        <li>Scénarios (<a href="#" class="image-popup"
+                                data-image="pharmacien bureau.webp">utilisateur</a>) (maman, pharmacien)</li>
                         <li>Maquettes navigation et parcours</li>
-                        <li>Wireframes pour tous les (<a href="#" class="image-popup" data-image="pharmacien mobile.webp">états</a>) de l'application</li>
+                        <li>Wireframes pour tous les (<a href="#" class="image-popup"
+                                data-image="pharmacien mobile.webp">états</a>) de l'application</li>
                         <li>Validation client sur les parcours critiques</li>
                     </ul>
                 </div>
@@ -136,7 +139,8 @@
                 <div class="contribution-item">
                     <h4>MLD (Modèle Logique de Données)</h4>
                     <ul>
-                        <li>Modélisation (<a href="#" class="image-popup" data-image="mld_pharmacie.webp">base de données</a>) avec Looping</li>
+                        <li>Modélisation (<a href="#" class="image-popup" data-image="mld_pharmacie.webp">base de
+                                données</a>) avec Looping</li>
                         <li>Définition tables et relations</li>
                         <li>Scripts SQL de création</li>
                         <li>Validation (<a href="#" class="image-popup"
@@ -149,48 +153,7 @@
         </div>
     </div>
 </div>
-
-<!-- Les autres modales restent identiques -->
-<div id="transverses-modal" class="modal">
-    <div class="modal-dialog">
-        <div class="modal-header">
-            <h3>Missions transverses</h3>
-            <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-            <div class="mission-item">
-                <h4>Refonte site e-commerce WordPress</h4>
-                <ul>
-                    <li>Modernisation d'un site vieillissant</li>
-                    <li>Optimisation performance (+45% PageSpeed)</li>
-                    <li>Réorganisation catalogue produits</li>
-                    <li>Amélioration métadonnées SEO</li>
-                </ul>
-            </div>
-
-            <div class="mission-item">
-                <h4>Audits SEO/UX</h4>
-                <ul>
-                    <li>Analyse de 3 sites clients</li>
-                    <li>Outils : Screaming Frog, Google Search Console, Semrush</li>
-                    <li>Étude performances mobiles (Core Web Vitals)</li>
-                    <li>Recommandations accessibilité RGAA</li>
-                </ul>
-            </div>
-
-            <div class="mission-item">
-                <h4>Cellule de crise PrestaShop x EBP</h4>
-                <ul>
-                    <li>Diagnostic panne critique synchronisation</li>
-                    <li>Analyse logs Apache/PhP et traces SQL</li>
-                    <li>Script SQL correctif pour rétablir statuts</li>
-                    <li>Résolution en moins de 48 heures</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
+<!-- Modale Sécurité et conformité - Version 3 colonnes -->
 <div id="securite-modal" class="modal">
     <div class="modal-dialog">
         <div class="modal-header">
@@ -198,8 +161,8 @@
             <button class="modal-close">&times;</button>
         </div>
         <div class="modal-body">
-            <div class="security-grid">
-                <div class="security-item">
+            <div class="contributions-flex">
+                <div class="contribution-item">
                     <h4>Authentification</h4>
                     <ul>
                         <li>JWT (JSON Web Token) avec rôles</li>
@@ -209,7 +172,7 @@
                     </ul>
                 </div>
 
-                <div class="security-item">
+                <div class="contribution-item">
                     <h4>Paiements</h4>
                     <ul>
                         <li>Stripe Checkout avec SCA/3DS</li>
@@ -219,7 +182,7 @@
                     </ul>
                 </div>
 
-                <div class="security-item">
+                <div class="contribution-item">
                     <h4>Données et RGPD</h4>
                     <ul>
                         <li>Données minimisées</li>
@@ -232,4 +195,49 @@
         </div>
     </div>
 </div>
+
+<!-- Modale Missions transverses - Version 3 colonnes -->
+<div id="transverses-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Missions transverses</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="contributions-flex">
+                <div class="contribution-item">
+                    <h4>Refonte site e-commerce WordPress</h4>
+                    <ul>
+                        <li>Modernisation d'un site vieillissant</li>
+                        <li>Optimisation performance (+45% PageSpeed)</li>
+                        <li>Réorganisation catalogue produits</li>
+                        <li>Amélioration métadonnées SEO</li>
+                    </ul>
+                </div>
+
+                <div class="contribution-item">
+                    <h4>Audits SEO/UX</h4>
+                    <ul>
+                        <li>Analyse de 3 sites clients</li>
+                        <li>Outils : Screaming Frog, Google Search Console, Semrush</li>
+                        <li>Étude performances mobiles (Core Web Vitals)</li>
+                        <li>Recommandations accessibilité RGAA</li>
+                    </ul>
+                </div>
+
+                <div class="contribution-item">
+                    <h4>Cellule de crise PrestaShop x EBP</h4>
+                    <ul>
+                        <li>Diagnostic panne critique synchronisation</li>
+                        <li>Analyse logs Apache/PhP et traces SQL</li>
+                        <li>Script SQL correctif pour rétablir statuts</li>
+                        <li>Résolution en moins de 48 heures</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}

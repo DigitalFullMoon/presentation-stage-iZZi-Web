@@ -3,32 +3,185 @@
 {% block content %}
 <div class="page-container">
     <h1>Méthodologie de Travail</h1>
-    
+
     <div class="content">
-        <h2>Approche de développement</h2>
-        <ul>
-            <li>Méthode itérative et collaborative inspirée des méthodes agiles</li>
-            <li>Binôme permanent avec validation des étapes</li>
-            <li>Wireframes & MLD validés avant développement</li>
-            <li>Intégration continue avec tests locaux</li>
-        </ul>
-        
-        <h2>Environnement technique</h2>
-        <ul>
-            <li><strong>Backend :</strong> Flask (Python), SQLAlchemy</li>
-            <li><strong>Base de données :</strong> MySQL</li>
-            <li><strong>Frontend :</strong> Flask Templates, HTML/CSS/JS natif</li>
-            <li><strong>Outils :</strong> Git/GitHub, Balsamiq, Looping, Postman</li>
-            <li><strong>Sécurité :</strong> JWT, RBAC, CSRF protection</li>
-        </ul>
-        
-        <h2>Workflow Git</h2>
-        <ul>
-            <li>Branches : main (stable), dev (intégration), feature/... (tâches)</li>
-            <li>Pull requests systématiques avec relecture de code</li>
-            <li>Tests avant chaque merge</li>
-            <li>Exclusion des fichiers sensibles (config.py)</li>
-        </ul>
+        <div class="intro-section">
+            <div class="flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="text-column">
+                    <h2>Organisation et Processus</h2>
+                    <p>Une approche agile et collaborative pour développer Pharma App avec rigueur et efficacité.</p>
+                </div>
+
+                <!-- Colonne de droite - Image (20%) -->
+                <div class="images-column">
+                    <img src="{{ url_for('static', filename='images/Méthodologie de travail.webp') }}"
+                        alt="Méthodologie de travail" class="content-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-buttons">
+            <button class="modal-btn" data-modal="approche-modal">Approche de développement</button>
+            <button class="modal-btn" data-modal="git-modal">Workflow Git</button>
+            <button class="modal-btn" data-modal="outils-modal">Outils et collaboration</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modale Approche de développement -->
+<div id="approche-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Approche de développement</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="modal-text-column">
+                    <div class="methodology-section">
+                        <div class="method-item">
+                            <h4>Méthode itérative et collaborative</h4>
+                            <ul>
+                                <li>Inspirée des <a href="#" class="image-popup" data-image="notion1.webp">méthodes</a>
+                                    <a href="#" class="image-popup" data-image="notion2.webp">agiles</a></li>
+                                <li>Binôme permanent avec validation des étapes</li>
+                                <li>Réunions client régulières à deux</li>
+                                <li>Adjustements constants après chaque réunion</li>
+                            </ul>
+                        </div>
+
+                        <div class="method-item">
+                            <h4>Validation et planification</h4>
+                            <ul>
+                                <li>Wireframes & MLD validés avant développement</li>
+                                <li>Intégration continue avec tests locaux</li>
+                                <li>Chaque fonctionnalité testée, validée, puis intégrée</li>
+                                <li><a href="#" class="image-popup" data-image="md.webp">Documentation</a> systématique
+                                    (.md)</li>
+                            </ul>
+                        </div>
+
+                        <div class="method-item">
+                            <h4>Organisation d'équipe</h4>
+                            <ul>
+                                <li><strong>Charles Massey</strong> - <a href="#" class="image-popup"
+                                        data-image="charles-massey.webp">Lead développeur</a>, architecte technique</li>
+                                <li><strong>Jean-François Poux</strong> - Développeur full-stack, wireframes, MLD</li>
+                                <li>Complémentarité des compétences</li>
+                                <li>Validation des étapes par le lead développeur</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonne de droite - Image (20%) -->
+                <div class="modal-image-column">
+                    <img src="{{ url_for('static', filename='images/agile.webp') }}" alt="Collaboration d'équipe"
+                        class="modal-content-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modale Workflow Git -->
+<div id="git-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Workflow Git & GitHub</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="modal-text-column">
+                    <div class="git-workflow">
+                        <div class="workflow-step">
+                            <h4>Organisation des branches</h4>
+                            <ul>
+                                <li><strong>main</strong> → version <a href="#" class="image-popup"
+                                        data-image="GITHUB PROJET1.webp">stable</a> et validée</li>
+                                <li><strong>dev</strong> → intégration des fonctionnalités</li>
+                            </ul>
+                        </div>
+
+                        <div class="workflow-step">
+                            <h4>Cycle de développement</h4>
+                            <ul>
+                                <li>Développement et tests locaux</li>
+                                <li>Pull request avec relecture de code</li>
+                                <li>Tests avant merge dans main</li>
+                            </ul>
+                        </div>
+
+                        <div class="workflow-step">
+                            <h4>Sécurité et qualité</h4>
+                            <ul>
+                                <li>Exclusion des fichiers sensibles (config.py)</li>
+                                <li>Relecture systématique du code</li>
+                                <li>Nettoyage des branches obsolètes</li>
+                                <li>Aucune donnée sensible en clair dans le code</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonne de droite - Image (20%) -->
+                <div class="modal-image-column">
+                    <img src="{{ url_for('static', filename='images/git-logo.webp') }}" alt="Workflow Git"
+                        class="modal-content-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modale Outils et collaboration -->
+<div id="outils-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Outils et collaboration</h3>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-flex-container">
+                <!-- Colonne de gauche - Texte (80%) -->
+                <div class="modal-text-column">
+                    <div class="tools-grid">
+                        <div class="tool-category">
+                            <h4>Modélisation & Conception</h4>
+                            <ul>
+                                <li><strong>Balsamiq</strong> - Wireframes et maquettes</li>
+                                <li><strong>Looping</strong> - Modèle Logique de Données (MLD)</li>
+                                <li><strong>Scripts SQL</strong> - Création et gestion de la base</li>
+                            </ul>
+                        </div>
+
+                        <div class="tool-category">
+                            <h4>Communication & Gestion</h4>
+                            <ul>
+                                <li><strong>Notion / Email / Meet</strong> - Échanges et points réguliers</li>
+                                <li><strong>GitHub</strong> - Suivi des tâches et bugs</li>
+                                <li><strong>To-do agile</strong> - Gestion des priorités</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Colonne de droite - Images empilées (20%) -->
+                <div class="modal-image-column">
+
+                    <img src="{{ url_for('static', filename='images/github-logo.webp') }}" alt="Logo GitHub"
+                        class="modal-stacked-image">
+
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
